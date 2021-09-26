@@ -1,0 +1,183 @@
+body {
+  background-color: rgb(179, 230, 245);
+  height: 100vh;
+  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+
+#wrapper {
+  height: 95%; 
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: max-content;
+  border: 2px solid whitesmoke;
+}
+
+.timer {
+  height: 30px;
+  font-size: 15px;
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c {
+  padding: 10px;
+  padding-top: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.color {
+  color: black;
+  font-size: 15px;
+  background-color: rgb(118, 0, 253);
+  height: 20px;
+  width: 200px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+}
+
+.color2 {
+  color: black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+  height: 20px;
+  width: 200px;
+  background-color: rgb(242, 163, 245);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Användarna */
+#listOfUsers {
+  grid-column: 1;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+  overflow-y:scroll;
+  height: 95vh;
+}
+
+.nameTags {
+  border-top: 2px solid rgb(179, 230, 245);
+  border-right: 2px solid rgb(179, 230, 245);
+  border-left: 2px solid rgb(179, 230, 245);
+  padding: 10px;
+  font-size: 20px;
+}
+
+.nameTags:hover, .mainUser:hover, .mainTester:hover  {
+  background: hotpink;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #c9c6c6;
+}
+
+.mainUser {
+  border-top: 2px solid rgb(179, 230, 245);
+  border-right: 2px solid rgb(179, 230, 245);
+  border-left: 2px solid rgb(179, 230, 245);
+  padding: 10px;
+  font-size: 20px;
+}
+
+.mainTester {
+  border-top: 2px solid rgb(179, 230, 245);
+  border-right: 2px solid rgb(179, 230, 245);
+  border-left: 2px solid rgb(179, 230, 245);
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Målningarna */
+#paintingWindow {
+  grid-column: 2/5 span;
+  background-color: rgb(255, 255, 255);
+  height: 95vh;
+  overflow-y:scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  align-content: baseline;
+}
+
+.pictureButtonClick {
+  position: relative;
+  top:7px;
+  color: black;
+  height: 25px;
+  width: 60px;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+.pictureDivs {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 195px;
+  height: 195px;
+  margin: 15px;
+  background-color: rgb(179, 230, 245);
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 40%;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+.paintingText {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.artistText {
+  font-weight: bolder;
+  font-size: 14px;
+}
+  
+.commonFavoritePictures {
+  border: 10px solid rgb(242, 163, 245);
+}
+
+.favoritePictures > img {
+  border: 10px solid rgb(118, 0, 253);
+}
+
+.loadingScreen {
+  background-color: rgba(0, 0, 0, 0.795);
+  position: absolute;
+  width: 90%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  z-index: 100;
+}
